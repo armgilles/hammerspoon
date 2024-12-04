@@ -57,7 +57,7 @@ hs.hotkey.bind({"alt", "shift"}, "L", grid.resizeWindowWider)
 -- alt+cmd+shift+J : Déplacer la fenêtre vers le bas
 --------------------------------------------------------
 
-local moveStep = 75
+local moveStep = 50
 local repeatTimer = nil
 
 -- Fonction pour déplacer la fenêtre
