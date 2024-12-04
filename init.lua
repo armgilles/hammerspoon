@@ -37,8 +37,8 @@ hs.window.highlight.start()
 ----------------------------------------------------
 local grid = require "hs.grid"
 
-grid.MARGINX = 12
-grid.MARGINY = 12
+grid.MARGINX = 0
+grid.MARGINY = 0
 grid.GRIDHEIGHT = 7
 grid.GRIDWIDTH = 7
 
