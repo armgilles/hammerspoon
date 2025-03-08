@@ -39,8 +39,8 @@ local grid = require "hs.grid"
 
 grid.MARGINX = 0
 grid.MARGINY = 0
-grid.GRIDHEIGHT = 7
-grid.GRIDWIDTH = 7
+grid.GRIDHEIGHT = 10
+grid.GRIDWIDTH = 10
 
 -- hjkl
 hs.hotkey.bind({"alt", "shift"}, "H", grid.resizeWindowThinner)
