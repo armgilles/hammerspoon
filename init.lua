@@ -65,17 +65,18 @@ local function moveWindow(direction)
     local win = hs.window.focusedWindow()
     if not win then return end -- Si aucune fenêtre n'est focus, ne rien faire
 
+    local screen = win:screen():frame() -- Cadre de l'écran actuel
     local frame = win:frame() -- Cadre de la fenêtre actuelle
 
     -- Ajuster la position selon la direction
     if direction == "left" then
-        frame.x = frame.x - moveStep
+        frame.x = math.max(screen.x, frame.x - moveStep)
     elseif direction == "right" then
-        frame.x = frame.x + moveStep
+        frame.x = math.min(screen.x + screen.w - frame.w, frame.x + moveStep)
     elseif direction == "up" then
-        frame.y = frame.y - moveStep
+        frame.y = math.max(screen.y, frame.y - moveStep)
     elseif direction == "down" then
-        frame.y = frame.y + moveStep
+        frame.y = math.min(screen.y + screen.h - frame.h, frame.y + moveStep)
     end
 
     -- Appliquer les nouvelles positions
