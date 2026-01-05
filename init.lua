@@ -1,20 +1,20 @@
 -----------------------------------------------
--- Naviguer entre les fenêtres avec alt + hjkl
+-- Naviguer entre les fenêtres avec alt + kltn --
 
 -----------------------------------------------
-hs.hotkey.bind({"alt"}, "h", function()
+hs.hotkey.bind({"alt"}, "k", function()
     hs.window.focusedWindow():focusWindowWest()
 end)
 
-hs.hotkey.bind({"alt"}, "j", function()
+hs.hotkey.bind({"alt"}, "l", function()
     hs.window.focusedWindow():focusWindowSouth()
 end)
 
-hs.hotkey.bind({"alt"}, "k", function()
+hs.hotkey.bind({"alt"}, "t", function()
     hs.window.focusedWindow():focusWindowNorth()
 end)
 
-hs.hotkey.bind({"alt"}, "l", function()
+hs.hotkey.bind({"alt"}, "n", function()
     hs.window.focusedWindow():focusWindowEast()
 end)
 
@@ -42,19 +42,19 @@ grid.MARGINY = 0
 grid.GRIDHEIGHT = 10
 grid.GRIDWIDTH = 10
 
--- hjkl
-hs.hotkey.bind({"alt", "shift"}, "H", grid.resizeWindowThinner)
-hs.hotkey.bind({"alt", "shift"}, "J",grid.resizeWindowTaller)
-hs.hotkey.bind({"alt", "shift"}, "K", grid.resizeWindowShorter)
-hs.hotkey.bind({"alt", "shift"}, "L", grid.resizeWindowWider)
+-- KLTN
+hs.hotkey.bind({"alt", "shift"}, "K", grid.resizeWindowThinner)
+hs.hotkey.bind({"alt", "shift"}, "L",grid.resizeWindowTaller)
+hs.hotkey.bind({"alt", "shift"}, "T", grid.resizeWindowShorter)
+hs.hotkey.bind({"alt", "shift"}, "N", grid.resizeWindowWider)
 
 --------------------------------------------------------
 -- Déplacement des fenêtres avec répétition de touche --
 
--- alt+cmd+shift+H : Déplacer la fenêtre vers la gauche
+-- alt+cmd+shift+K : Déplacer la fenêtre vers la gauche
 -- alt+cmd+shift+L : Déplacer la fenêtre vers la droite
--- alt+cmd+shift+K : Déplacer la fenêtre vers le haut
--- alt+cmd+shift+J : Déplacer la fenêtre vers le bas
+-- alt+cmd+shift+T : Déplacer la fenêtre vers le haut
+-- alt+cmd+shift+N : Déplacer la fenêtre vers le bas
 --------------------------------------------------------
 
 local moveStep = 150
@@ -96,10 +96,10 @@ local function bindMoveWithRepeat(mods, key, direction)
 end
 
 -- Raccourcis clavier pour le déplacement avec répétition
-bindMoveWithRepeat({"alt", "cmd", "shift"}, "H", "left")  -- Alt + Cmd + Shift + H : Gauche
-bindMoveWithRepeat({"alt", "cmd", "shift"}, "L", "right") -- Alt + Cmd + Shift + L : Droite
-bindMoveWithRepeat({"alt", "cmd", "shift"}, "K", "up")    -- Alt + Cmd + Shift + K : Haut
-bindMoveWithRepeat({"alt", "cmd", "shift"}, "J", "down")  -- Alt + Cmd + Shift + J : Bas
+bindMoveWithRepeat({"alt", "cmd", "shift"}, "K", "left")  -- Alt + Cmd + Shift + K : Gauche
+bindMoveWithRepeat({"alt", "cmd", "shift"}, "N", "right") -- Alt + Cmd + Shift + N : Droite
+bindMoveWithRepeat({"alt", "cmd", "shift"}, "T", "up")    -- Alt + Cmd + Shift + T : Haut
+bindMoveWithRepeat({"alt", "cmd", "shift"}, "L", "down")  -- Alt + Cmd + Shift + L : Bas
 
 
 --------------------------------------------------------------
